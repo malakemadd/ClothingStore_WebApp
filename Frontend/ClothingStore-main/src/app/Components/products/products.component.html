@@ -1,0 +1,222 @@
+<div class="shop-page">
+    <!-- Shop Header Section -->
+    <div class="shop-header ">
+        <div class="container ">
+            <div class="row align-items-center">
+                <div class="col-12 ">
+                    <h1 class="shop-title">Our Collection</h1>
+                    <div class="breadcrumb-nav">
+                        <span>Home</span>
+                        <i class="fas fa-chevron-right"></i>
+                        <span class="active">Shop</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Filter Stats Bar -->
+            <div class="col-12 mb-4">
+                <div class="filter-stats">
+                    <div class="results-count">
+                        Showing {{ filteredProducts.length }} of {{ products.length }} products
+                    </div>
+                    <div class="view-options">
+                        <span class="sort-label">Sort by:</span>
+                        <select class="sort-select" [(ngModel)]="currentSort" (change)="sortProducts(currentSort)">
+                            <option value="featured">Featured</option>
+                            <option value="price-low-high">Price: Low to High</option>
+                            <option value="price-high-low">Price: High to Low</option>
+                            
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <!-- Filters Sidebar -->
+            <div class="col-3 d-flex flex-column filter-sidebar">
+                <div class="filter-section">
+                    <div class="filter-header" (click)="toggleSection('category')">
+                        <span>Category</span>
+                        <span class="toggle-icon" [class.expanded]="expandedSections.category">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div class="filter-content" [class.collapsed]="!expandedSections.category">
+                        <div class="checkbox-list">
+                            @for(category of Categories; track category.id) {
+                                <label class="checkbox-item">
+                                    <input type="checkbox" 
+                                           [checked]="selectedCategory === category.id"
+                                           (change)="toggleCategory(category)">
+                                    {{ category.name }}
+                                </label>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subcategory section -->
+                <div class="filter-section" *ngIf="selectedCategory !== null">
+                    <div class="filter-header" (click)="toggleSection('subcategory')">
+                        <span>Subcategory</span>
+                        <span class="toggle-icon" [class.expanded]="expandedSections.subcategory">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div class="filter-content" [class.collapsed]="!expandedSections.subcategory">
+                        <div class="checkbox-list">
+                            @for(subCategory of MatchedSubCategories; track subCategory.id) {
+                                <label class="checkbox-item">
+                                    <input type="checkbox" 
+                                           [checked]="selectedSubCategories.includes(subCategory.id)"
+                                           (change)="toggleSubCategory(subCategory.id)">
+                                    {{ subCategory.name }}
+                                </label>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SIZE FILTER -->
+                <div class="filter-section">
+
+                    <div class="filter-header" (click)="toggleSection('size')">
+                        <span>Size</span>
+                        <span class="toggle-icon" [class.expanded]="expandedSections.size">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+
+                    
+                    <div class="filter-content" [class.collapsed]="!expandedSections.size">
+                        <div class="checkbox-list">
+                            <!-- <div *ngFor="let size of getEnumValues(SizeEnum)">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" 
+                                           [checked]="selectedSizes.includes(size)"
+                                           (change)="toggleSize(size)">
+                                    {{ SizeEnum[size] }}
+                                </label>
+                            </div> -->
+
+                            @for(size of getEnumValues(SizeEnum); track size){
+                                <label class="checkbox-item">
+                                    <input type="checkbox" 
+                                           [checked]="selectedSizes.includes(size)"
+                                           (change)="toggleSize(size)">
+                                    {{ SizeEnum[size] }}
+                                </label>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!--COLOR FILTER-->
+                <div class="filter-section">
+                    <div class="filter-header" (click)="toggleSection('color')">
+                        <span>Color</span>
+                        <span class="toggle-icon" [class.expanded]="expandedSections.color">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+
+
+                    
+                    <div class="filter-content" [class.collapsed]="!expandedSections.color">
+                        <div class="checkbox-list">
+                            <div *ngFor="let color of getEnumValues(ColorEnum)">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" 
+                                           [checked]="selectedColors.includes(color)"
+                                           (change)="toggleColor(color)">
+                                    {{ ColorEnum[color] }}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!--PRICE FILTER-->
+                <div class="filter-section">
+                    <div class="filter-header" (click)="toggleSection('priceRange')">
+                        <span>Price Range</span>
+                        <span class="toggle-icon" [class.expanded]="expandedSections.priceRange">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div class="filter-content" [class.collapsed]="!expandedSections.priceRange">
+                        <div class="price-inputs">
+                            <input type="number" [(ngModel)]="selectedMinPrice" 
+                                   (input)="filterProducts()" 
+                                   placeholder="Min Price"
+                                   class="form-control">
+                            <input type="number" [(ngModel)]="selectedMaxPrice" 
+                                   (input)="filterProducts()" 
+                                   placeholder="Max Price"
+                                   class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="filter-section">
+                    <div class="filter-header">
+                        <span>Availability</span>
+                    </div>
+                    <div class="filter-content">
+                        <div class="checkbox-item">
+                            <input type="checkbox" 
+                                   [checked]="IsInStock"
+                                   (change)="toggleStockFilter()">
+                            <label>In Stock Only</label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="col-9">
+                <div class="row products-grid">
+                    @for(prod of paginatedProducts; track $index){   
+                        <div class="col-4 mb-4">
+                            <app-one-product [prodData]="prod"></app-one-product>  
+                        </div>
+                    }
+                </div>
+                <nav aria-label="Page navigation" class="mt-4" *ngIf="totalPages > 1">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item" [class.disabled]="pageNum === 1">
+                            <a class="page-link" (click)="changePage(pageNum - 1)">Previous</a>
+                        </li> 
+                        <li class="page-item" *ngFor="let page of getPaginationArray()" [class.active]="page === pageNum">
+                            <a class="page-link" (click)="changePage(page)">{{page}}</a>
+                        </li>
+                        <li class="page-item" [class.disabled]="pageNum === totalPages">
+                            <a class="page-link" (click)="changePage(pageNum + 1)">Next</a>
+                        </li> 
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

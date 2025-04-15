@@ -1,0 +1,199 @@
+
+<style>
+ .table th {
+    font-weight: 500;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-header {
+    border-bottom: 0;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.icon-circle {
+    background-color: #F3F2EE;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #212529;
+    transition: all 0.2s ease;
+}
+
+.icon-circle:hover {
+    background-color: #e9ecef;
+    transform: scale(1.05);
+}
+
+.continue_btn {
+    color: #111111;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 1px solid #e1e1e1;
+    padding: 14px 35px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.continue_btn:hover {
+    color: #111111;
+    background-color: #f3f2ee;
+}
+
+.update_btn {
+    background-color: #111111;
+    color: #ffffff;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.update_btn:hover {
+    background-color: #2d2d2d;
+    color: #ffffff;
+}
+</style>
+<div class="container mt-4" *ngIf="cart">
+  <div class="card border-0">
+      <div class="card-header bg-dark text-white py-3">
+          <div class="d-flex justify-content-between align-items-center">
+              <h3 class="mb-0">Shopping Cart</h3>
+              <small><fa-icon [icon]="calendarIcon" class="me-2"></fa-icon>{{cart.orderDate | date:'medium'}}</small>
+          </div>
+      </div>
+
+      <div class="card-body p-4">
+          <div class="row">
+              <!-- Main Cart Section -->
+              <div class="col-md-8">
+                  <div class="table-responsive">
+                      <table class="table">
+                          <thead>
+                            <tr>
+                              <th>
+                                  <span class="d-inline-flex align-items-center gap-2">
+                                      <fa-icon [icon]="faBox" style="font-size: 14px;"></fa-icon>
+                                      PRODUCT
+                                      <fa-icon [icon]="sortIcon" class="icon-circle" style="font-size: 12px;" (click)="sortByProduct()"></fa-icon>
+                                  </span>
+                              </th>
+                              <th>
+                                  <span class="d-inline-flex align-items-center gap-2">
+                                      <fa-icon [icon]="faListOl" style="font-size: 14px;"></fa-icon>
+                                      QUANTITY
+                                      <fa-icon [icon]="sortIcon" class="icon-circle" style="font-size: 12px;" (click)="sortByQuantity()"></fa-icon>
+                                  </span>
+                              </th>
+                              <th>
+                                  <span class="d-inline-flex align-items-center gap-2">
+                                      <fa-icon [icon]="faMoneyBill" style="font-size: 14px;"></fa-icon>
+                                      TOTAL
+                                      <fa-icon [icon]="sortIcon" class="icon-circle" style="font-size: 12px;" (click)="sortByTotal()"></fa-icon>
+                                  </span>
+                              </th>
+                              <th></th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                              <tr *ngFor="let item of cart.orderItems">
+                                  <td class="d-flex align-items-center gap-3">
+                                      <img [src]="'/Images/' + item.imageUrl" 
+                                          [alt]="item.name" 
+                                          class="img-fluid rounded"
+                                          style="width: 100px; height: 100px; object-fit: contain; object-position: center;">
+                                      <div>
+                                          <h6 class="text-muted mb-0">{{item.name}}</h6>
+                                          <h5 class=" mb-0">${{item.price | number:'1.2-2'}}</h5>
+                                      </div>
+                                  </td>
+                                  <td>
+                                      <div class="d-flex align-items-center gap-2">
+                                          <fa-icon [icon]="minusIcon" 
+                                              class="icon-circle" 
+                                        
+                                              (click)="decreaseQuantity(item)">
+                                          </fa-icon>
+                                          <span class="px-2">{{item.quantity}}</span>
+                                          <fa-icon [icon]="plusIcon" 
+                                          class="icon-circle" 
+                                             
+                                              (click)="increaseQuantity(item)">
+                                          </fa-icon>
+                                      </div>
+                                  </td>
+                                  <td><h5>${{item.price * item.quantity | number:'1.2-2'}}</h5></td>
+                                  <td>
+                                      <fa-icon [icon]="deleteIcon" 
+                                          class="icon-circle" 
+                                         
+                                          (click)="deleteItem(item.id)">
+                                      </fa-icon>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+                  <div class="d-flex gap-4 mt-4 justify-content-between">
+                    <a class="continue_btn" routerLink="/">
+                        <span>CONTINUE </span>
+                        <span>SHOPPING</span>
+                    </a>
+                    
+                    <div class="continue_btn update_btn" (click)="clearCart()">
+                        <fa-icon [icon]="trashIcon"></fa-icon>
+                        <span>CLEAR CART</span>
+                    </div>
+                </div>
+              </div>
+
+              <!-- Order Summary Section -->
+              <div class="col-md-4">
+                  <div class="card border-0 " style=" background-color: #F3F2EE;">
+                      <div class="card-body">
+                          <h5 class="mb-3">CART TOTAL</h5>
+                          <div class="d-flex justify-content-between mb-2">
+                              <span>Order ID: #{{cart.id}}</span>
+                          </div>
+                         
+                          <div class="d-flex justify-content-between">
+                              <span>Total</span>
+                              <span class="text-danger fw-bold">${{cart.totalAmount | number:'1.2-2'}}</span>
+                              
+                          </div>
+
+                          <button class="btn btn-dark w-100 mt-4" [routerLink]="['/CheckOut', cart.id]">PROCEED TO CHECKOUT</button>
+                        </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<div *ngIf="error" class="container mt-4">
+  <div class="alert alert-warning">
+    {{ error }}
+  </div>
+</div>
+
+<div *ngIf="!cart && !error" class="container mt-4">
+  <div class="d-flex justify-content-center">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+</div>
+

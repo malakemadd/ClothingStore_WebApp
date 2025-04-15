@@ -1,0 +1,57 @@
+@if(err != null||errorMessage!=null){
+  <div class="alert alert-danger">
+    {{ err?? errorMessage }}
+  </div>
+}
+<div class="container py-5">
+  <form class="p-5 bg-white rounded-lg shadow-lg w-75 mx-auto" [formGroup]="LoginForm">
+      <h3 class="text-center mb-5 text-dark fw-semibold">
+          Login to Your Account
+      </h3>
+    <div class="mb-4">
+      <label class="form-label fw-medium text-muted">Email Address</label>
+      <input type="Email" class="form-control border-0 shadow-sm" formControlName="usernameOrEmail" placeholder="Enter your email">
+      @if (LoginForm.get('usernameOrEmail')?.hasError('required') && LoginForm.get('usernameOrEmail')?.touched) {
+        <div class="text-danger mt-1 small">email is required.</div>
+      } @else if (LoginForm.get('usernameOrEmail')?.hasError('usernameOrEmail')) {
+        <div class="text-danger mt-1 small">Please enter a valid email address.</div>
+      }
+    </div>
+
+    <div class="mb-4">
+      <label class="form-label fw-medium text-muted">Password</label>
+      <input type="password" class="form-control border-0 shadow-sm" formControlName="password" placeholder="Enter your password">
+      @if (LoginForm.get('password')?.hasError('required') && LoginForm.get('password')?.touched) {
+        <div class="text-danger mt-1 small">password is required.</div>
+      } @else if (LoginForm.get('password')?.hasError('minlength')) {
+        <div class="text-danger mt-1 small">password must be at least 8 characters long.</div>
+      } @else if (LoginForm.get('password')?.hasError('pattern')) {
+        <div class="text-danger mt-1 small">password must include at least one uppercase letter, one lowercase letter, one number, and one special character.</div>
+      }
+    </div>
+
+    <div class=" mb-4">
+      <div class="checker">
+        <input type="checkbox" id="checkbox" class="" name="rememberme">
+        <label for="checkbox" class="form-label ms-1">Remember Me</label>
+      </div>
+      <div class="text-center">
+        <button type="submit" [disabled]="LoginForm.invalid" (click)="login()" class="btn btn-dark fw-medium px-5 py-2 rounded-pill">Login</button>
+      </div>
+    </div>
+    <div >
+      <span style="cursor: pointer;">
+
+          <i class="fab fa-google fa-lg text-dark fs-3" (click)="googlelogin()"></i>
+
+      </span>
+      <span class="ms-3">
+        <a routerLink='/register' >
+          <i class="fab fa-facebook fa-lg text-dark fs-3"></i>
+        </a>
+
+      </span>
+      <p class="my-2">Don't Have An Account?...<a routerLink='/register' >Create New Account</a></p>
+    </div>
+  </form>
+</div>

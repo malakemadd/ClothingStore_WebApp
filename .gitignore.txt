@@ -1,0 +1,17 @@
+# Ignore Visual Studio files
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore build outputs
+bin/
+obj/
+
+# Ignore keys (if you don’t want to track these)
+key
+key.pub
+last
+last.pub

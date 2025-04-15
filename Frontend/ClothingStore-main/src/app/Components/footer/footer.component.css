@@ -1,0 +1,43 @@
+.font{
+  color:black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.1rem;
+
+}
+
+.footer {
+  background-color: #000000;
+  color: #ddd;
+  text-align: left;
+}
+
+.footer h5 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer p,
+.footer a {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.social-icons a {
+  color: #bbb;
+  margin-right: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}

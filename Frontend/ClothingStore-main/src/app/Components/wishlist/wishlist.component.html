@@ -1,0 +1,25 @@
+<div class="container mt-5">
+  <h2>Wishlist</h2>
+  <div class="row">
+    <div *ngFor="let item of wishlistItems" class="col-md-4 mb-4">
+      <div class="card">
+        <img [src]="'/Images/'+item.imageUrl" class="card-img-top" alt="{{item.name}}">
+        <div class="card-body text-center" >
+          <h5 class="card-title">{{ item.ProductId }}</h5>
+          <p class="card-text"><strong>{{ item.name}}</strong></p>
+
+          <p class="card-text"><strong>Price: {{ item.price | currency:'USD' }}</strong></p>
+          <div class="d-flex gap-2" >
+            <input type="button" value="REMOVE" class="btn  flex-grow-1 " style="background-color: #F3F2EE; border: 1px solid black;"  (click)="removeFromWishlist(item.code)">
+            <input type="button" value="ADD TO CART" class="btn btn-dark flex-grow-1" (click)="AddToCart(item.code)">
+
+            <!-- <a  class="btn btn-dark flex-grow-1" (click)="AddToCart(item.code)">ADD TO CART</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="wishlistItems.length === 0 || !wishlistItems " class="col-12 text-center">
+      <p>Your wishlist is empty.</p>
+    </div>
+  </div>
+</div>

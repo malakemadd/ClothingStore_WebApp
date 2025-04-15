@@ -1,0 +1,139 @@
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alice&family=Dancing+Script:wght@400..700&family=Gravitas+One&family=Jaini&family=Lora:ital,wght@0,400..700;1,400..700&family=Nanum+Myeongjo&family=Ponomar&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alice&family=Dancing+Script:wght@400..700&family=Gravitas+One&family=Jaini&family=Lora:ital,wght@0,400..700;1,400..700&family=Nanum+Myeongjo&family=Ponomar&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<div class="page-wrapper">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand pe-3" href="#" style="font-family: 'Gravitas One', serif;font-weight: 400;font-style: normal;font-size: 2rem"
+    >Chicify<i class="fa-solid fa-square sq"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav gap-5 mx-auto w-100 d-flex justify-content-center">
+        <li class="nav-item font">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active-link" style="color: black;" aria-current="page" >Home</a>
+        </li>
+        <li class="nav-item font">
+          <a routerLink="/products" routerLinkActive="active-link" class="nav-link" style="color: black;">Shop</a>
+        </li>
+      
+        <li class="nav-item font">
+          <a class="nav-link" routerLink="/about" routerLinkActive="active-link"  style="color: black;" aria-current="page" >About Us</a>
+        </li>
+      </ul>
+      
+      <ul class="navbar-nav ms-auto d-flex flex-row gap-3">
+        @if(islogged?.userName=="mahmodmohammed"||islogged?.userName=="MalakEmad")
+        {
+          <li class="nav-item font color-black">
+            <a class="nav-link"  style="color: black;" routerLink="/admin">
+              <i class="fa-solid fa-user-tie" style="font-size: 1.3rem;color:black"></i>
+            </a>
+          </li>
+        }
+        @if(!islogged?.isAuthenticated){
+          <li class="nav-item font color-black">
+            <a class="nav-link" routerLinkActive="active-link" style="color: black;" routerLink="/register">Register</a>
+          </li>
+          <li class="nav-item font">
+            <a class="nav-link" routerLinkActive="active-link" style="color: black;" routerLink="/login">Login</a>
+          </li>
+        }
+        @else {
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/orders">
+              <i class="fa-solid fa-bag-shopping" style="font-size: 1.3rem;color:black"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/wishlist" class="nav-link" >
+              <i  class="fa-regular fa-heart" style="font-size: 1.3rem;color:black"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/cart">
+              <i class="fa-solid fa-cart-shopping" style="font-size: 1.3rem;color:black"></i>
+            </a>
+          </li>
+          <li class="nav-item font color-black">
+            <div>
+            <a class="nav-link" routerLink="/home"  style="color: black;" (click)="logout()">Logout</a>
+          </div>
+          </li>
+        }
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+<div class="main-content">
+<router-outlet></router-outlet>
+</div>
+<app-alert></app-alert>
+<!-- rest of your app template -->
+
+<footer class="footer ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <h2 class="footer-logo navbar-brand" style="font-family: 'Gravitas One', serif;font-weight: 400;font-style: normal">Chicify<i class="fa-solid fa-square sq"></i></h2>
+                <p class="footer-description">
+                    The customer is at the heart of our unique business model, which includes design.
+                </p>
+                <div class="payment-methods">
+                  <i class="fa-brands fa-cc-stripe fs-2"></i>
+                  <i class="fa-brands fa-cc-visa fs-2"></i>
+                  <i class="fa-brands fa-cc-mastercard fs-2"></i>
+                  <i class="fa-brands fa-cc-paypal fs-2"></i>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <h3 class="footer-title">SHOPPING</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Clothing Store</a></li>
+                    <li><a href="#">Trending Shoes</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Sale</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h3 class="footer-title">SHOPPING</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Payment Methods</a></li>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Return & Exchanges</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h3 class="footer-title">NEWLETTER</h3>
+                <p class="newsletter-text">
+                    Be the first to know about new arrivals, look books, sales & promos!
+                </p>
+                <div class="newsletter-input">
+                    <input type="email" placeholder="Your email">
+                    <button type="submit">
+                        <i class="fas fa-envelope"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</div>
+
+
+
+
+
