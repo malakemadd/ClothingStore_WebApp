@@ -1,0 +1,46 @@
+<style>
+ 
+</style>
+
+<div class="dashboard-container container">
+  <main class="content">
+    <header class="dashboard-header">
+      <h1>Dashboard Overview</h1>
+      <p class="text-muted">Welcome to your analytics dashboard</p>
+    </header>
+
+    <section class="stats-grid">
+      <div *ngFor="let stat of statistics" class="stat-card">
+        <div class="stat-icon">
+          <i class="fas fa-{{stat.icon}}"></i>
+        </div>
+        <div class="stat-info">
+          <h3>{{ stat.value }}</h3>
+          <p>{{ stat.title }}</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="charts-container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="chart-wrapper">
+            <h4>Categories Distribution</h4>
+            <div class="chart-container">
+              <canvas #CategoriesChartCanvas></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="chart-wrapper">
+            <h4>Orders by Product</h4>
+            <div class="chart-container">
+              <canvas #productChartCanvas></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

@@ -1,0 +1,106 @@
+
+<div class="alert alert-danger" *ngIf="err">
+  {{ err }}
+</div>
+<div class="container py-5">
+  <form class="p-5 bg-white rounded-lg shadow-lg w-75 mx-auto" [formGroup]="registerForm">
+    <h3 class="text-center mb-5 text-dark fw-semibold">Create an Account</h3>
+      <div class="mb-4">
+        <label class="form-label fw-medium text-muted">First Name</label>
+        <input type="text" class="form-control border-0 shadow-sm" formControlName="firstName" placeholder="firstName">
+        @if (registerForm.get('firstName')?.hasError('required') && registerForm.get('firstName')?.touched) {
+          <div class="text-danger mt-1 small">First Name is required.</div>
+        } @else if (registerForm.get('firstName')?.hasError('minlength')) {
+          <div class="text-danger mt-1 small">First Name must be at least 3 characters long.</div>
+        } @else if (registerForm.get('firstName')?.hasError('maxlength')) {
+          <div class="text-danger mt-1 small">First Name cannot exceed 20 characters.</div>
+        } @else if (registerForm.get('firstName')?.hasError('pattern')) {
+          <div class="text-danger mt-1 small">First Name can only contain letters, numbers, and underscores.</div>
+        }
+      </div>
+      <div class="mb-4">
+        <label class="form-label fw-medium text-muted">Last Name</label>
+        <input type="text" class="form-control border-0 shadow-sm" formControlName="lastName" placeholder="lastName">
+        @if (registerForm.get('lastName')?.hasError('required') && registerForm.get('lastName')?.touched) {
+          <div class="text-danger mt-1 small">Last Name is required.</div>
+        } @else if (registerForm.get('lastName')?.hasError('minlength')) {
+          <div class="text-danger mt-1 small">Last Name must be at least 3 characters long.</div>
+        } @else if (registerForm.get('lastName')?.hasError('maxlength')) {
+          <div class="text-danger mt-1 small">Last Name cannot exceed 20 characters.</div>
+        } @else if (registerForm.get('lastName')?.hasError('pattern')) {
+          <div class="text-danger mt-1 small">Last Name can only contain letters, numbers, and underscores.</div>
+        }
+
+    </div>
+    <div class="mb-4">
+      <label class="form-label fw-medium text-muted">userName</label>
+      <input type="text" class="form-control border-0 shadow-sm" formControlName="userName" placeholder="userName">
+      @if (registerForm.get('userName')?.hasError('required') && registerForm.get('userName')?.touched) {
+        <div class="text-danger mt-1 small">userName is required.</div>
+      } @else if (registerForm.get('userName')?.hasError('minlength')) {
+        <div class="text-danger mt-1 small">userName must be at least 3 characters long.</div>
+      } @else if (registerForm.get('userName')?.hasError('maxlength')) {
+        <div class="text-danger mt-1 small">userName cannot exceed 20 characters.</div>
+      } @else if (registerForm.get('userName')?.hasError('pattern')) {
+        <div class="text-danger mt-1 small">userName can only contain letters, numbers, and underscores.</div>
+      }
+    </div>
+    <div class="mb-4">
+      <label class="form-label fw-medium text-muted">Date Of Birth</label>
+      <input type="date" class="form-control border-0 shadow-sm" formControlName="dateOfBirth">
+      @if (registerForm.get('dateOfBirth')?.hasError('required') && registerForm.get('dateOfBirth')?.touched) {
+        <div class="text-danger mt-1 small">Date Of Birth is required.</div>
+      }
+    </div>
+
+    <div class="mb-4">
+      <label class="form-label fw-medium text-muted">PhoneNumber</label>
+      <input type="text" class="form-control border-0 shadow-sm" formControlName="phoneNumber" placeholder="01234567890">
+      @if (registerForm.get('phoneNumber')?.hasError('required') && registerForm.get('phoneNumber')?.touched) {
+        <div class="text-danger mt-1 small">Phone Number is required.</div>
+      } @else if (registerForm.get('phoneNumber')?.hasError('minlength')) {
+        <div class="text-danger mt-1 small">Phonenumber must be 11 Numbers long.</div>
+      } @else if (registerForm.get('phoneNumber')?.hasError('maxlength')) {
+        <div class="text-danger mt-1 small">Phonenumber must be 11 Numbers long.</div>
+      }
+      </div>
+
+    <div class="mb-4">
+      <label class="form-label fw-medium text-muted">Email Address</label>
+      <input type="Email" class="form-control border-0 shadow-sm" formControlName="email" placeholder="abc@abc.com">
+      @if (registerForm.get('email')?.hasError('required') && registerForm.get('email')?.touched) {
+        <div class="text-danger mt-1 small">email is required.</div>
+      } @else if (registerForm.get('email')?.hasError('email')) {
+        <div class="text-danger mt-1 small">Please enter a valid email address.</div>
+      }
+    </div>
+
+    <div class="mb-4">
+      <label class="form-label fw-medium text-muted">Password</label>
+      <input type="Password" class="form-control border-0 shadow-sm" formControlName="password" placeholder="Enter your password">
+      @if (registerForm.get('password')?.hasError('required') && registerForm.get('password')?.touched) {
+        <div class="text-danger mt-1 small">password is required.</div>
+      } @else if (registerForm.get('password')?.hasError('minlength')) {
+        <div class="text-danger mt-1 small">password must be at least 8 characters long.</div>
+      } @else if (registerForm.get('password')?.hasError('pattern')) {
+        <div class="text-danger mt-1 small">password must include at least one uppercase letter, one lowercase letter, one number, and one special character.</div>
+      }
+    </div>
+
+    <div class="mb-4">
+      <label class="form-label fw-medium text-muted">Confirm Password</label>
+      <input type="password" class="form-control border-0 shadow-sm" formControlName="confirmPassword" placeholder="Confirm your password">
+      @if (registerForm.get('confirmPassword')?.hasError('required') && registerForm.get('confirmPassword')?.touched) {
+        <div class="text-danger mt-1 small">Password confirmation is required.</div>
+      } @else if (registerForm.hasError('mismatch') && registerForm.get('confirmPassword')?.touched) {
+        <div class="text-danger mt-1 small">Passwords do not match.</div>
+      }
+    </div>
+    <div class="text-center mb-4">
+      <button type="submit" [disabled]="registerForm.invalid" (click)="register()" class="btn btn-dark fw-medium px-5 py-2 rounded-pill">Register</button>
+    </div>
+    <div >
+      <p>Do You Have An Account?...<a routerLink='/login' >Log In</a></p>
+    </div>
+  </form>
+</div>

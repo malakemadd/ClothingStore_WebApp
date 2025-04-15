@@ -1,0 +1,51 @@
+
+<style>
+
+</style>
+
+
+<div class="card mb-4 border-0" style="width: 17rem;" [class.out-of-stock]="prodData.stock === 0">
+
+    <a [routerLink]="['/productDetails',prodData.code]" >
+        <div class="image-container">
+            <img [src]="'/Images/' + prodData?.imageUrl" class="card-img-top" alt="...">
+            <div class="overlay" *ngIf="prodData?.stock === 0">
+                <span class="out-of-stock-text">Out of Stock</span>
+            </div>
+        </div>
+    </a>
+
+    <!-- @if(prodData.stock === 0){
+        <div class="out-of-stock-label">Out of Stock</div>
+    } -->
+
+    <div class="d-flex flex-column">
+        <div class="d-flex mt-2">
+            <span >{{prodData?.name}}</span>
+            <span class="ms-auto">
+                    <i [class]="isInWishList? 'fs-5 fa-solid fa-heart text-danger':'fs-5 fa-regular fa-heart'" 
+                    (click)="addToWishList(prodData.code)">
+                    </i>
+
+            </span>
+        </div>
+
+            <span class="mt-1 fw-bold">${{prodData?.price}}</span>
+            <!-- <span class="ms-auto"><i class="fa-solid fa-cart-plus"></i></span> -->
+
+
+
+
+        <button class="btn btn-dark btn-sm mt-2 mx-1"
+                (click)="AddToCart(prodData.code,1)"
+                [disabled]="prodData.stock === 0"
+                [class.disabled]="prodData.stock === 0"
+                ><i class="fa-solid fa-cart-shopping"></i>
+                {{prodData.stock === 0 ? 'Out of Stock' : 'Add to cart'}}
+
+        </button>
+
+
+
+    </div>
+</div>

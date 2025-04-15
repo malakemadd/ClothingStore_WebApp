@@ -1,0 +1,397 @@
+
+ <style>
+    :root {
+        --primary-gray: #2d3436;
+        --secondary-gray: #636e72;
+        --light-gray: #f5f6fa;
+        --border-gray: #dfe6e9;
+    }
+
+    .table th {
+        font-weight: 600;
+        color: var(--secondary-gray);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.75rem;
+    }
+    
+    .table td {
+        vertical-align: middle;
+        color: var(--primary-gray);
+    }
+    
+    .collapse {
+        transition: all 0.3s ease;
+    }
+    
+    .badge {
+        padding: 0.5em 1em;
+        font-weight: 500;
+    }
+    
+    .card {
+        border-radius: 0.75rem;
+        border: 1px solid var(--border-gray);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    .summary-number {
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--primary-gray);
+    }
+
+    .summary-label {
+        font-size: 0.875rem;
+        color: var(--secondary-gray);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .order-row:hover {
+        background-color: var(--light-gray);
+        transition: all 0.2s ease;
+    }
+
+    .chevron-icon {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: var(--light-gray);
+        transition: all 0.2s ease;
+    }
+
+    .chevron-icon:hover {
+        background-color: var(--border-gray);
+    }
+    .icon-circle {
+    background-color: #F3F2EE;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111111;
+    transition: all 0.2s ease;
+}
+
+.icon-circle:hover {
+    background-color: #e9ecef;
+    transform: scale(1.05);
+}
+:root {
+        --primary-black: #111111;
+        --text-gray: #666666;
+        --light-bg: #F3F2EE;
+        --border-color: #E1E1E1;
+    }
+
+    .table th {
+        font-weight: 500;
+        color: var(--text-gray);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.75rem;
+        padding: 1rem 1.5rem;
+    }
+    
+    .table td {
+        padding: 1.5rem;
+        vertical-align: middle;
+        color: var(--primary-black);
+    }
+
+    .product-image {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+
+    .quantity-badge {
+        background: var(--light-bg);
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        font-size: 0.875rem;
+        color: var(--primary-black);
+    }
+
+    .subtotal-price {
+        font-weight: 600;
+        color: var(--primary-black);
+        font-size: 1.1rem;
+    }
+
+    .product-name {
+        font-weight: 500;
+        color: var(--primary-black);
+    }
+
+    .table-inner {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .expanded-section {
+        background: var(--light-bg);
+        padding: 2rem;
+        margin-top: 0.5rem;
+    }
+    .order-details-section {
+    margin-bottom: 2rem;
+}
+
+.details-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    height: 100%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.details-title {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.details-text {
+    font-size: 0.95rem;
+    color: var(--primary-black);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.payment-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.payment-badge.stripe {
+    background-color: #635BFF15;
+    color: #635BFF;
+}
+
+.payment-badge.credit-card {
+    background-color: #00000010;
+    color: #000000;
+}
+
+.payment-badge.cash {
+    background-color: #28a74515;
+    color: #28a745;
+}
+</style>
+
+<div class="container mt-5" >
+    <!-- Summary Card -->
+    <div class="card mb-4" style="background-color: #F3F2EE;">
+        <div class="card-body py-4">
+            <div class="row text-center">
+                <div class="col-md-6 border-end">
+                    <div class="summary-number mb-1">{{UserOrders.length}}</div>
+                    <div class="summary-label">Total Orders</div>
+                </div>
+                <div class="col-md-6">
+                    <div class="summary-number mb-1">${{getTotalAmount() | number:'1.2-2'}}</div>
+                    <div class="summary-label">Total Spent</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header bg-white py-4">
+            <h5 class="mb-0" style="color: var(--primary-gray); letter-spacing: 1px;">Order History</h5>
+        </div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table mb-0">
+                    <thead class="bg-light">
+                        <tr>
+                            <th class="ps-4">
+                                <span class="d-inline-flex align-items-center gap-2">
+                                    <fa-icon [icon]="faHashtag" style="font-size: 14px;"></fa-icon>
+                                    Order ID	
+                                    <fa-icon [icon]="sortIcon" class="icon-circle" style="font-size: 12px;" (click)="sortById()"></fa-icon>
+                                </span>
+                            </th>
+                            <th>
+                                <span class="d-inline-flex align-items-center gap-2">
+                                    <fa-icon [icon]="faCalendar" style="font-size: 14px;"></fa-icon>
+                                    Date
+                                    <fa-icon [icon]="sortIcon" class="icon-circle" style="font-size: 12px;" (click)="sortByDate()"></fa-icon>
+                                </span>
+                            </th>
+                            <th>
+                                <span class="d-inline-flex align-items-center gap-2">
+                                    <fa-icon [icon]="faBox" style="font-size: 14px;"></fa-icon>
+                                    Items
+                                    <fa-icon [icon]="sortIcon" class="icon-circle" style="font-size: 12px;" (click)="sortByItems()"></fa-icon>
+                                </span>
+                            </th>
+                            <th>
+                                <span class="d-inline-flex align-items-center gap-2">
+                                    <fa-icon [icon]="faDollar" style="font-size: 14px;"></fa-icon>
+                                    Total Amount
+                                    <fa-icon [icon]="sortIcon" class="icon-circle" style="font-size: 12px;" (click)="sortByAmount()"></fa-icon>
+                                </span>
+                            </th>
+                            <th>
+                                <span class="d-inline-flex align-items-center gap-2">
+                                    <fa-icon [icon]="faCreditCard" style="font-size: 14px;"></fa-icon>
+                                    Payment Method
+                                </span>
+                            </th>
+                            
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (order of UserOrders; track $index) {
+                        <tr class="order-row border-bottom">
+                            <td class="ps-4 fw-bold">#{{order.id}}</td>
+                            <td>{{order.orderDate | date:'dd MMM yyyy'}}</td>
+                            <td>
+                                <span class="badge  text-dark border" style="background-color: #F3F2EE;">
+                                    {{order.orderItems.length}} items
+                                </span>
+                            </td>
+                            <td class="fw-bold">${{order.totalAmount | number:'1.2-2'}}</td>
+                            <td>
+                                <span class="badge text-dark border" style="background-color: #F3F2EE;">
+                                    {{PaymentMethod[order.method]}}
+                                </span>
+                            </td>
+                            
+                            <td class="text-end pe-4">
+                                <div class="chevron-icon">
+                                    <fa-icon [icon]="order.IsExpanded ? faChevronUp : faChevronDown" 
+                                        class=" icon-circle "
+                                        style="cursor: pointer;"
+                                        (click)="order.IsExpanded = !order.IsExpanded">
+                                    </fa-icon>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr [class.show]="order.IsExpanded">
+                            
+                            <td colspan="8" class="p-0">
+                                <div class="collapse mb-5" [class.show]="order.IsExpanded">
+                                    <div class="expanded-section" style="background-color: #F3F2EE;">
+                                        <div class="order-details-section mb-4">
+                                            <div class="row g-4">
+                                                <div class="col-md-6">
+                                                    <div class="details-card">
+                                                        <h6 class="details-title">
+                                                            <fa-icon [icon]="faLocationDot" class="me-2 text-secondary"></fa-icon>
+                                                            Billing Address
+                                                        </h6>
+                                                        <p class="details-text">{{order.billignAddress}}</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="details-card">
+                                                        <h6 class="details-title">
+                                                            <fa-icon [icon]="faCreditCard" class="me-2 text-secondary"></fa-icon>
+                                                            Payment Details
+                                                        </h6>
+                                                        <p class="details-text">
+                                                            @if (order.method === PaymentMethod.Stripe) {
+                                                                <span class="payment-badge stripe">
+                                                                    <fa-icon [icon]="faStripe" class="me-2"></fa-icon>
+                                                                    Session ID: {{order.stripedetails}}
+                                                                </span>
+                                                            } @else if (order.method === PaymentMethod.CreditCard && order.stripedetails) {
+                                                                <span class="payment-badge credit-card">
+                                                                    <fa-icon [icon]="faCreditCard" class="me-2"></fa-icon>
+                                                                    •••• •••• •••• {{order.stripedetails.slice(-4)}}
+                                                                </span>
+                                                            } @else if (order.method === PaymentMethod.CreditCard) {
+                                                                <span class="payment-badge credit-card">Card details not available</span>
+                                                            } @else {
+                                                                <span class="payment-badge cash">
+                                                                    <fa-icon [icon]="faTruck" class="me-2"></fa-icon>
+                                                                    Cash on delivery
+                                                                </span>
+                                                            }
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table table-inner mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            <span class="d-inline-flex align-items-center gap-2">
+                                                                <fa-icon [icon]="faBox" style="font-size: 14px;"></fa-icon>
+                                                                Product
+                                                            </span>
+                                                        </th>
+                                                        <th>
+                                                            <span class="d-inline-flex align-items-center gap-2">
+                                                                <fa-icon [icon]="faListOl" style="font-size: 14px;"></fa-icon>
+                                                                Quantity
+                                                            </span>
+                                                        </th>
+                                                        <th>
+                                                            <span class="d-inline-flex align-items-center gap-2">
+                                                                <fa-icon [icon]="faMoneyBill" style="font-size: 14px;"></fa-icon>
+                                                                Price
+                                                            </span>
+                                                        </th>
+                                                        <th>
+                                                            <span class="d-inline-flex align-items-center gap-2">
+                                                                <fa-icon [icon]="faDollar" style="font-size: 14px;"></fa-icon>
+                                                                Subtotal
+                                                            </span>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr *ngFor="let item of order.orderItems">
+                                                        <td class="d-flex align-items-center gap-3">
+                                                            <img [src]="'/Images/' + item.imageUrl" 
+                                                                 [alt]="item.name"
+                                                                 class="product-image"
+                                                                 style="object-fit: contain;">
+                                                            <span class="product-name">{{item.name}}</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="quantity-badge">{{item.quantity}}</span>
+                                                        </td>
+                                                        <td>${{item.price | number:'1.2-2'}}</td>
+                                                        <td class="subtotal-price">${{item.price * item.quantity | number:'1.2-2'}}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

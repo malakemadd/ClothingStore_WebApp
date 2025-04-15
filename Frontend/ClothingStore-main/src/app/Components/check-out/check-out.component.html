@@ -1,0 +1,322 @@
+<style>
+    :host {
+    --primary-color: #111111;
+    --border-color: #e1e1e1;
+    --error-color: #dc3545;
+}
+
+.form-control {
+    padding: 0.75rem 1rem;
+    border-color: var(--border-color);
+    border-radius: 0;
+    
+    &:focus {
+        box-shadow: none;
+        border-color: var(--primary-color);
+    }
+}
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.card {
+    border-radius: 0;
+    border: 1px solid var(--border-color);
+}
+
+.btn-dark {
+    background-color: var(--primary-color);
+    border-radius: 0;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    
+    &:hover {
+        background-color: #333;
+    }
+}
+
+.order-items {
+    font-size: 0.95rem;
+}
+.checkmark {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    height: 14px;
+    width: 14px;
+    border: 1.5px solid #d7d7d7;
+    content: "";
+    border-radius: 2px;
+}
+.payment-methods {
+    .payment-option {
+        background-color: #F3F2EE;
+        padding: 1rem;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background-color: #EBEAE6;
+        }
+
+        .form-check-input {
+            background-color: #fff;
+            border-color: #ddd;
+            width: 1.2rem;
+            height: 1.2rem;
+            margin-top: 0.2rem;
+
+            &:checked {
+                background-color: #111111;
+                border-color: #111111;
+            }
+        }
+
+        .form-check-label {
+            font-weight: 500;
+            color: #111111;
+            cursor: pointer;
+        }
+    }
+}
+.form-control {
+    &.is-invalid {
+        border-color: var(--error-color);
+        background-image: none;
+    }
+}
+
+.invalid-feedback {
+    font-size: 0.875rem;
+    color: var(--error-color);
+}
+.custom-checkbox {
+    .form-check-input {
+        background-color: #fff;
+        border-color: #ddd;
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-top: 0.3rem;
+        
+        &:checked {
+            background-color: #111111;
+            border-color: #111111;
+        }
+    }
+
+    .form-check-label {
+        font-weight: 500;
+        color: #111111;
+        cursor: pointer;
+    }
+
+    small {
+        color: #666666;
+        margin-left: 1.8rem;
+    }
+}
+
+.credit-card-form {
+    input {
+        background-color: #fff;
+        border-color: #ddd;
+        
+        &:focus {
+            border-color: var(--primary-color);
+            box-shadow: none;
+        }
+    }
+}
+</style>
+
+
+<div class="container py-5">
+    <div class="row">
+        <!-- Billing Details Form -->
+        <div class="col-lg-8">
+            <h4 class="mb-4">BILLING DETAILS</h4>
+            <form [formGroup]="billingForm" (ngSubmit)="onSubmit()">
+
+                
+                <div class="mb-3">
+                    <label class="form-label">Country*</label>
+                    <input type="text" class="form-control" 
+                           [class.is-invalid]="billingForm.get('country')?.invalid && billingForm.get('country')?.touched"
+                           formControlName="country">
+                    <div class="invalid-feedback" *ngIf="billingForm.get('country')?.invalid && billingForm.get('country')?.touched">
+                        <span *ngIf="billingForm.get('country')?.errors?.['required']">{{validationMessages.country.required}}</span>
+                        <span *ngIf="billingForm.get('country')?.errors?.['minlength']">{{validationMessages.country.minlength}}</span>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Address*</label>
+                    <input type="text" class="form-control mb-2" 
+                           [class.is-invalid]="billingForm.get('streetAddress')?.invalid && billingForm.get('streetAddress')?.touched"
+                           placeholder="Street Address" 
+                           formControlName="streetAddress">
+                    <div class="invalid-feedback" *ngIf="billingForm.get('streetAddress')?.invalid && billingForm.get('streetAddress')?.touched">
+                        <span *ngIf="billingForm.get('streetAddress')?.errors?.['required']">{{validationMessages.streetAddress.required}}</span>
+                        <span *ngIf="billingForm.get('streetAddress')?.errors?.['minlength']">{{validationMessages.streetAddress.minlength}}</span>
+                    </div>
+                    <input type="text" class="form-control" 
+                           placeholder="Apartment, suite, unit etc (optional)" 
+                           formControlName="apartment">
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Town/City*</label>
+                    <input type="text" class="form-control"
+                           [class.is-invalid]="billingForm.get('city')?.invalid && billingForm.get('city')?.touched"
+                           formControlName="city">
+                    <div class="invalid-feedback" *ngIf="billingForm.get('city')?.invalid && billingForm.get('city')?.touched">
+                        <span *ngIf="billingForm.get('city')?.errors?.['required']">{{validationMessages.city.required}}</span>
+                        <span *ngIf="billingForm.get('city')?.errors?.['minlength']">{{validationMessages.city.minlength}}</span>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Country/State*</label>
+                    <input type="text" class="form-control"
+                           [class.is-invalid]="billingForm.get('state')?.invalid && billingForm.get('state')?.touched"
+                           formControlName="state">
+                    <div class="invalid-feedback" *ngIf="billingForm.get('state')?.invalid && billingForm.get('state')?.touched">
+                        <span *ngIf="billingForm.get('state')?.errors?.['required']">{{validationMessages.state.required}}</span>
+                        <span *ngIf="billingForm.get('state')?.errors?.['minlength']">{{validationMessages.state.minlength}}</span>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Postcode / ZIP*</label>
+                    <input type="text" class="form-control"
+                           [class.is-invalid]="billingForm.get('postcode')?.invalid && billingForm.get('postcode')?.touched"
+                           formControlName="postcode">
+                    <div class="invalid-feedback" *ngIf="billingForm.get('postcode')?.invalid && billingForm.get('postcode')?.touched">
+                        <span *ngIf="billingForm.get('postcode')?.errors?.['required']">{{validationMessages.postcode.required}}</span>
+                        <span *ngIf="billingForm.get('postcode')?.errors?.['pattern']">{{validationMessages.postcode.pattern}}</span>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+    <div class="form-check custom-checkbox">
+        <input class="form-check-input" 
+               type="checkbox" 
+               id="addNote" 
+               formControlName="addNote">
+        <label class="form-check-label d-flex align-items-center gap-2" for="addNote">
+            <fa-icon [icon]="faNoteSticky" class="text-secondary" hidden></fa-icon>
+            <span>Add a note about your order</span>
+        </label>
+        <small class="text-muted d-block mt-1">
+            Special instructions for delivery or any other notes
+        </small>
+    </div>
+</div>
+
+                <div class="mb-3" *ngIf="billingForm.get('addNote')?.value">
+                    <label class="form-label">Order notes*</label>
+                    <textarea class="form-control" rows="3" 
+                              [class.is-invalid]="billingForm.get('orderNotes')?.invalid && billingForm.get('orderNotes')?.touched"
+                              formControlName="orderNotes"></textarea>
+                    <div class="invalid-feedback" *ngIf="billingForm.get('orderNotes')?.invalid && billingForm.get('orderNotes')?.touched">
+                        <span *ngIf="billingForm.get('orderNotes')?.errors?.['maxlength']">{{validationMessages.orderNotes.maxlength}}</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="col-lg-4">
+            <div class="card" style="background-color: #F3F2EE;">
+                <div class="card-body">
+                    <h5 class="card-title mb-4">Order Summary</h5>
+                    <div class="order-items">
+                        <div class="d-flex justify-content-between mb-2" *ngFor="let item of order.orderItems">
+                            <span class="text-dark bold ">{{item.name}}</span>
+                            <span class="fw-bold">{{item.quantity}} x ${{item.price}}</span>
+                        </div>
+                    </div>
+                    <hr>
+                    
+                    <div class="d-flex justify-content-between mb-3">
+                        <strong>Total</strong>
+                        <span class="text-danger fw-bold">${{order.totalAmount}}</span>
+                    </div>
+                    <p>Please note that all payments are final and you will need to contact the support for a refund</p>
+                    <hr>
+                    <div class="payment-methods mb-4">
+                        <div class="form-check payment-option mb-3">
+                            <input class="form-check-input" type="radio" name="paymentMethod" (change)="onPaymentMethodChange($event)" value="OnDelivery" id="cashDelivery" checked>
+                            <label class="form-check-label d-flex align-items-center gap-2" for="cashDelivery">
+                                <fa-icon [icon]="faTruck" class="text-secondary"></fa-icon>
+                                <span>Cash-on-Delivery</span>
+                            </label>
+                        </div>
+                        <div class="form-check payment-option mb-3">
+                            <input class="form-check-input" type="radio" name="paymentMethod" (change)="onPaymentMethodChange($event)" value="Credit Card" id="creditCard">
+                            <label class="form-check-label d-flex align-items-center gap-2" for="creditCard">
+                                <fa-icon [icon]="faCreditCard" class="text-secondary"></fa-icon>
+                                <span>Credit Card</span>
+                            </label>
+                        </div>
+                        <div class="credit-card-form mb-4" *ngIf="paymentMethod === 'Credit Card'">
+                            <form [formGroup]="paymentForm">
+                                <!-- <input formControlName="cardNumber" placeholder="Card Number"> -->
+                            
+                            <div class="mb-3">
+                                <input type="text" class="form-control" 
+                                       [class.is-invalid]="paymentForm.get('cardNumber')?.invalid && paymentForm.get('cardNumber')?.touched"
+                                       placeholder="Card Number" 
+                                       formControlName="cardNumber">
+                                <div class="invalid-feedback" *ngIf="paymentForm.get('cardNumber')?.invalid && paymentForm.get('cardNumber')?.touched">
+                                    <span *ngIf="paymentForm.get('cardNumber')?.errors?.['required']">Card number is required</span>
+                                    <span *ngIf="paymentForm.get('cardNumber')?.errors?.['pattern']">Please enter a valid 16-digit card number</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 mb-3">
+                                    <input type="text" class="form-control"
+                                           [class.is-invalid]="paymentForm.get('cardExpiry')?.invalid && paymentForm.get('cardExpiry')?.touched"
+                                           placeholder="MM/YY" 
+                                           formControlName="cardExpiry">
+                                    <div class="invalid-feedback" *ngIf="paymentForm.get('cardExpiry')?.invalid && paymentForm.get('cardExpiry')?.touched">
+                                        <span *ngIf="paymentForm.get('cardExpiry')?.errors?.['required']">Expiry date is required</span>
+                                        <span *ngIf="paymentForm.get('cardExpiry')?.errors?.['pattern']">Please enter a valid date (MM/YY)</span>
+                                        <span>asdiohasdio</span>
+                                    </div>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <input type="text" class="form-control"
+                                           [class.is-invalid]="paymentForm.get('cardCvv')?.invalid && paymentForm.get('cardCvv')?.touched"
+                                           placeholder="CVV" 
+                                           formControlName="cardCvv">
+                                    <div class="invalid-feedback" *ngIf="paymentForm.get('cardCvv')?.invalid && paymentForm.get('cardCvv')?.touched">
+                                        <span *ngIf="paymentForm.get('cardCvv')?.errors?.['required']">CVV is required</span>
+                                        <span *ngIf="paymentForm.get('cardCvv')?.errors?.['pattern']">Please enter a valid CVV (3-4 digits)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+                        <div class="form-check payment-option">
+                            <input class="form-check-input" type="radio" name="paymentMethod" (change)="onPaymentMethodChange($event)" value="Stripe" id="stripe">
+                            <label class="form-check-label d-flex align-items-center gap-2" for="stripe">
+                                <fa-icon [icon]="faStripe" class="text-secondary"></fa-icon>
+                                <span>Stripe</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-dark w-100" type="submit" (click)="onSubmit()" [disabled]="billingForm.invalid || (paymentForm.invalid&&paymentMethod=='Credit Card')  ">PLACE ORDER</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <button class="btn btn-dark w-100" type="submit"></button> -->
