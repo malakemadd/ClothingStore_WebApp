@@ -121,7 +121,7 @@ namespace ClothingAPIs.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Categories", (string)null);
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("ClothingAPIs.Models.Order", b =>
@@ -154,7 +154,7 @@ namespace ClothingAPIs.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Orders", (string)null);
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("ClothingAPIs.Models.OrderItem", b =>
@@ -180,7 +180,7 @@ namespace ClothingAPIs.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("OrderItems", (string)null);
+                    b.ToTable("OrderItems");
                 });
 
             modelBuilder.Entity("ClothingAPIs.Models.Product", b =>
@@ -227,7 +227,7 @@ namespace ClothingAPIs.Migrations
 
                     b.HasIndex("SubCategoryId");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("ClothingAPIs.Models.ProductAdditionalImage", b =>
@@ -249,7 +249,7 @@ namespace ClothingAPIs.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductAdditionalImage", (string)null);
+                    b.ToTable("ProductAdditionalImage");
                 });
 
             modelBuilder.Entity("ClothingAPIs.Models.Review", b =>
@@ -283,7 +283,7 @@ namespace ClothingAPIs.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Reviews", (string)null);
+                    b.ToTable("Reviews");
                 });
 
             modelBuilder.Entity("ClothingAPIs.Models.SubCategory", b =>
@@ -305,7 +305,7 @@ namespace ClothingAPIs.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("SubCategories", (string)null);
+                    b.ToTable("SubCategories");
                 });
 
             modelBuilder.Entity("ClothingAPIs.Models.WishList", b =>
@@ -329,7 +329,7 @@ namespace ClothingAPIs.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("WishLists", (string)null);
+                    b.ToTable("WishLists");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
