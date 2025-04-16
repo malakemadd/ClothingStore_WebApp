@@ -20,15 +20,14 @@ export class AppComponent  implements OnInit{
     
   }
   ngOnInit(): void {
-    this.userAuthService.getUserLogged().subscribe({
-      next: (data)=>{this.islogged=data,
-        console.log(this.islogged);
-      },
-      error: (err)=> this.error=err
-    }
-    )
-    console.log(this.islogged?.isAuthenticated,this.islogged?.userName);
-    console.log("hiii");
+    this.userAuthService.authStatus$.subscribe({
+      next: (value) => {
+        this.islogged = value;
+        console.log("AppComponent Auth Status:", this.islogged);
+      }
+    });
+
+    this.userAuthService.refreshAuthStatus();
   }
   logout(){
     this.userAuthService.logout().subscribe({
