@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C3B3A1B4-D83D-43A0-A0B4-D1B7235EB09A}|ClothingAPIs.csproj|d:\\iti_content\\angular\\last\\backend\\clothingapis\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{C3B3A1B4-D83D-43A0-A0B4-D1B7235EB09A}|ClothingAPIs.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C3B3A1B4-D83D-43A0-A0B4-D1B7235EB09A}|ClothingAPIs.csproj|d:\\iti_content\\angular\\last\\backend\\clothingapis\\clothingapis.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{C3B3A1B4-D83D-43A0-A0B4-D1B7235EB09A}|ClothingAPIs.csproj|solutionrelative:clothingapis.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C3B3A1B4-D83D-43A0-A0B4-D1B7235EB09A}|ClothingAPIs.csproj|d:\\iti_content\\angular\\last\\backend\\clothingapis\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{C3B3A1B4-D83D-43A0-A0B4-D1B7235EB09A}|ClothingAPIs.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C3B3A1B4-D83D-43A0-A0B4-D1B7235EB09A}|ClothingAPIs.csproj|d:\\iti_content\\angular\\last\\backend\\clothingapis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3B3A1B4-D83D-43A0-A0B4-D1B7235EB09A}|ClothingAPIs.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3B3A1B4-D83D-43A0-A0B4-D1B7235EB09A}|ClothingAPIs.csproj|d:\\iti_content\\angular\\last\\backend\\clothingapis\\global.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C3B3A1B4-D83D-43A0-A0B4-D1B7235EB09A}|ClothingAPIs.csproj|solutionrelative:global.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3B3A1B4-D83D-43A0-A0B4-D1B7235EB09A}|ClothingAPIs.csproj|d:\\iti_content\\angular\\last\\backend\\clothingapis\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -208,7 +212,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -232,13 +236,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "global.json",
+              "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\global.json",
+              "RelativeDocumentMoniker": "global.json",
+              "ToolTip": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\global.json",
+              "RelativeToolTip": "global.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-18T19:45:41.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Dockerfile",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Dockerfile",
               "RelativeDocumentMoniker": "Dockerfile",
               "ToolTip": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Dockerfile",
               "RelativeToolTip": "Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-04-18T16:59:20.535Z",
               "EditorCaption": ""
@@ -246,18 +263,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "ForgetPasswordDTO.cs",
-              "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\DTO\\ForgetPasswordDTO.cs",
-              "RelativeDocumentMoniker": "DTO\\ForgetPasswordDTO.cs",
-              "ToolTip": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\DTO\\ForgetPasswordDTO.cs",
-              "RelativeToolTip": "DTO\\ForgetPasswordDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T15:25:54.193Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "ReviewsController.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Controllers\\ReviewsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ReviewsController.cs",
@@ -269,7 +274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ProductController.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
@@ -281,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "OrderItemsController.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Controllers\\OrderItemsController.cs",
               "RelativeDocumentMoniker": "Controllers\\OrderItemsController.cs",
@@ -299,13 +304,39 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAQwGEAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAQwDAAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T00:15:11.297Z"
+              "WhenOpened": "2025-03-24T00:15:11.297Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "ClothingAPIs.csproj",
+              "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\ClothingAPIs.csproj",
+              "RelativeDocumentMoniker": "ClothingAPIs.csproj",
+              "ToolTip": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\ClothingAPIs.csproj",
+              "RelativeToolTip": "ClothingAPIs.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-29T13:16:51.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ForgetPasswordDTO.cs",
+              "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\DTO\\ForgetPasswordDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\ForgetPasswordDTO.cs",
+              "ToolTip": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\DTO\\ForgetPasswordDTO.cs",
+              "RelativeToolTip": "DTO\\ForgetPasswordDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T15:25:54.193Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -317,20 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ClothingAPIs.csproj",
-              "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\ClothingAPIs.csproj",
-              "RelativeDocumentMoniker": "ClothingAPIs.csproj",
-              "ToolTip": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\ClothingAPIs.csproj",
-              "RelativeToolTip": "ClothingAPIs.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-29T13:16:51.442Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "ExternalLoginDTO.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\DTO\\ExternalLoginDTO.cs",
               "RelativeDocumentMoniker": "DTO\\ExternalLoginDTO.cs",
@@ -342,7 +360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Order.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Models\\Order.cs",
               "RelativeDocumentMoniker": "Models\\Order.cs",
@@ -354,7 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "AppUser.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Models\\AppUser.cs",
               "RelativeDocumentMoniker": "Models\\AppUser.cs",
@@ -366,7 +384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "AccountController.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
@@ -378,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Product.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Models\\Product.cs",
               "RelativeDocumentMoniker": "Models\\Product.cs",
@@ -390,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "WishListDTO.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\NewFolder\\WishListDTO.cs",
               "RelativeDocumentMoniker": "NewFolder\\WishListDTO.cs",
@@ -402,7 +420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "ReviewDTO.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\NewFolder\\ReviewDTO.cs",
               "RelativeDocumentMoniker": "NewFolder\\ReviewDTO.cs",
@@ -414,7 +432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "AddToCartDto.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\NewFolder\\AddToCartDto.cs",
               "RelativeDocumentMoniker": "NewFolder\\AddToCartDto.cs",
@@ -426,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "Controllers\\CategoryController.cs",
@@ -438,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "ClothingAPIs.http",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\ClothingAPIs.http",
               "RelativeDocumentMoniker": "ClothingAPIs.http",
@@ -450,7 +468,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "WishListController.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Controllers\\WishListController.cs",
               "RelativeDocumentMoniker": "Controllers\\WishListController.cs",
@@ -462,7 +480,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "OrderController.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
@@ -474,7 +492,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "ProductAdditionalImage.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Models\\ProductAdditionalImage.cs",
               "RelativeDocumentMoniker": "Models\\ProductAdditionalImage.cs",
@@ -486,7 +504,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "RegisterDTO.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\DTO\\RegisterDTO.cs",
               "RelativeDocumentMoniker": "DTO\\RegisterDTO.cs",
@@ -498,7 +516,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "RegisterDTO2.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\DTO\\RegisterDTO2.cs",
               "RelativeDocumentMoniker": "DTO\\RegisterDTO2.cs",
@@ -510,7 +528,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "IWishListService.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\IRepoServices\\IWishListService.cs",
               "RelativeDocumentMoniker": "IRepoServices\\IWishListService.cs",
@@ -522,7 +540,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "WishListService.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\RepoServices\\WishListService.cs",
               "RelativeDocumentMoniker": "RepoServices\\WishListService.cs",
@@ -534,7 +552,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "EmailSettings.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Helpers\\EmailSettings.cs",
               "RelativeDocumentMoniker": "Helpers\\EmailSettings.cs",
@@ -546,7 +564,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "20250401183409_addingsubcategory.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Migrations\\20250401183409_addingsubcategory.cs",
               "RelativeDocumentMoniker": "Migrations\\20250401183409_addingsubcategory.cs",
@@ -558,7 +576,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "20250401184445_additionalimagesfix.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Migrations\\20250401184445_additionalimagesfix.cs",
               "RelativeDocumentMoniker": "Migrations\\20250401184445_additionalimagesfix.cs",
@@ -570,7 +588,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "20250401183718_addmoreimages.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Migrations\\20250401183718_addmoreimages.cs",
               "RelativeDocumentMoniker": "Migrations\\20250401183718_addmoreimages.cs",
@@ -582,7 +600,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Models\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Models\\ApplicationDbContext.cs",
@@ -594,7 +612,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "WishList.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Models\\WishList.cs",
               "RelativeDocumentMoniker": "Models\\WishList.cs",
@@ -606,7 +624,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "subcategory .cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Models\\subcategory .cs",
               "RelativeDocumentMoniker": "Models\\subcategory .cs",
@@ -618,7 +636,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "Category.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Models\\Category.cs",
               "RelativeDocumentMoniker": "Models\\Category.cs",
@@ -630,7 +648,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "Review.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Models\\Review.cs",
               "RelativeDocumentMoniker": "Models\\Review.cs",
@@ -642,7 +660,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "BillingDto.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\DTO\\BillingDto.cs",
               "RelativeDocumentMoniker": "DTO\\BillingDto.cs",
@@ -654,7 +672,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "stripe.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Models\\stripe.cs",
               "RelativeDocumentMoniker": "Models\\stripe.cs",
@@ -666,7 +684,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "20250329152410_addstripedetails.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Migrations\\20250329152410_addstripedetails.cs",
               "RelativeDocumentMoniker": "Migrations\\20250329152410_addstripedetails.cs",
@@ -678,7 +696,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "OrderItem.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Models\\OrderItem.cs",
               "RelativeDocumentMoniker": "Models\\OrderItem.cs",
@@ -690,7 +708,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "20250329141202_addbillingaddress.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Migrations\\20250329141202_addbillingaddress.cs",
               "RelativeDocumentMoniker": "Migrations\\20250329141202_addbillingaddress.cs",
@@ -702,7 +720,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "20250329141516_addadditionalnotes.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Migrations\\20250329141516_addadditionalnotes.cs",
               "RelativeDocumentMoniker": "Migrations\\20250329141516_addadditionalnotes.cs",
@@ -714,7 +732,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "20250329141558_addadditionalnotesnullable.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Migrations\\20250329141558_addadditionalnotesnullable.cs",
               "RelativeDocumentMoniker": "Migrations\\20250329141558_addadditionalnotesnullable.cs",
@@ -726,7 +744,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "MailSettings.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Helpers\\MailSettings.cs",
               "RelativeDocumentMoniker": "Helpers\\MailSettings.cs",
@@ -738,7 +756,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "20250327005208_computedtotalamount.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Migrations\\20250327005208_computedtotalamount.cs",
               "RelativeDocumentMoniker": "Migrations\\20250327005208_computedtotalamount.cs",
@@ -750,17 +768,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "Microsoft.CSharp.Core.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\Roslyn\\Microsoft.CSharp.Core.targets",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\Roslyn\\Microsoft.CSharp.Core.targets",
               "ViewState": "AgIAADoAAAAAAAAAAAAswFMAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-03-26T19:56:22.04Z"
+              "WhenOpened": "2025-03-26T19:56:22.04Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "20250324230556_addingsize.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Migrations\\20250324230556_addingsize.cs",
               "RelativeDocumentMoniker": "Migrations\\20250324230556_addingsize.cs",
@@ -772,7 +791,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "20250324194515_fix.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Migrations\\20250324194515_fix.cs",
               "RelativeDocumentMoniker": "Migrations\\20250324194515_fix.cs",
@@ -784,7 +803,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "20250324175437_third.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Migrations\\20250324175437_third.cs",
               "RelativeDocumentMoniker": "Migrations\\20250324175437_third.cs",
@@ -792,11 +811,12 @@
               "RelativeToolTip": "Migrations\\20250324175437_third.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T17:54:38.015Z"
+              "WhenOpened": "2025-03-24T17:54:38.015Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "20250324170830_second.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Migrations\\20250324170830_second.cs",
               "RelativeDocumentMoniker": "Migrations\\20250324170830_second.cs",
@@ -808,7 +828,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "20250324002643_firstclothing.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Migrations\\20250324002643_firstclothing.cs",
               "RelativeDocumentMoniker": "Migrations\\20250324002643_firstclothing.cs",
@@ -820,7 +840,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "20250324002418_clothingfirst.cs",
               "DocumentMoniker": "C:\\Users\\Mahmod\\Desktop\\AITasks\\day3\\ClothingAPIs\\Migrations\\20250324002418_clothingfirst.cs",
               "ToolTip": "C:\\Users\\Mahmod\\Desktop\\AITasks\\day3\\ClothingAPIs\\Migrations\\20250324002418_clothingfirst.cs",

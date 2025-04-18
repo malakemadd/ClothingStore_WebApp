@@ -157,3 +157,9 @@ D:\ITI_Content\Angular\last\Backend\ClothingAPIs\obj\Release\net8.0\refint\Cloth
 D:\ITI_Content\Angular\last\Backend\ClothingAPIs\obj\Release\net8.0\ClothingAPIs.pdb
 D:\ITI_Content\Angular\last\Backend\ClothingAPIs\obj\Release\net8.0\ClothingAPIs.genruntimeconfig.cache
 D:\ITI_Content\Angular\last\Backend\ClothingAPIs\obj\Release\net8.0\ref\ClothingAPIs.dll
+D:\ITI_Content\Angular\last\Backend\ClothingAPIs\bin\Release\net8.0\publish\web.config
+D:\ITI_Content\Angular\last\Backend\ClothingAPIs\bin\Release\net8.0\publish\appsettings.Development.json
+D:\ITI_Content\Angular\last\Backend\ClothingAPIs\bin\Release\net8.0\publish\appsettings.json
+D:\ITI_Content\Angular\last\Backend\ClothingAPIs\bin\Release\net8.0\publish\ClothingAPIs.deps.json
+D:\ITI_Content\Angular\last\Backend\ClothingAPIs\bin\Release\net8.0\publish\ClothingAPIs.runtimeconfig.json
+D:\ITI_Content\Angular\last\Backend\ClothingAPIs\bin\Release\net8.0\publish\global.json
