@@ -1,20 +1,20 @@
-# Use .NET SDK to build
+# Stage 1: Build
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copy only the .csproj file and restore
+# Copy only .csproj file and restore
 COPY Backend/ClothingAPIs/ClothingAPIs.csproj Backend/ClothingAPIs/
 RUN dotnet restore Backend/ClothingAPIs/ClothingAPIs.csproj
 
-# Copy all source files
+# Copy the rest of the code
 COPY Backend/ClothingAPIs/ Backend/ClothingAPIs/
 WORKDIR /src/Backend/ClothingAPIs
 
-# Build and publish to /app/publish
+# Publish the application
 RUN dotnet publish -c Release -o /app/publish
 
-# Use the ASP.NET runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+# Stage 2: Run
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 COPY --from=build /app/publish .
 ENTRYPOINT ["dotnet", "ClothingAPIs.dll"]
