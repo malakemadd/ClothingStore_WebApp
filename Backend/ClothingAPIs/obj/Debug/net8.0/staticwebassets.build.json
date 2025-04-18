@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "FOUlWUKEu8QsJNru7Esp1yDPWmMffTnLkNPPuAWqJ5s=",
+  "Hash": "2Eb+WORf7JwfgpmXqZroP03N+yjFkYsI+EamK9rfy2A=",
   "Source": "ClothingAPIs",
   "BasePath": "_content/ClothingAPIs",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }

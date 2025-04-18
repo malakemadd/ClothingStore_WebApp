@@ -5792,11 +5792,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\ClothingAPIs\\ClothingAPIs\\ClothingAPIs.csproj",
+      "projectUniqueName": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\ClothingAPIs.csproj",
       "projectName": "ClothingAPIs",
-      "projectPath": "C:\\Users\\LENOVO\\Desktop\\ClothingAPIs\\ClothingAPIs\\ClothingAPIs.csproj",
+      "projectPath": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\ClothingAPIs.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\Desktop\\ClothingAPIs\\ClothingAPIs\\obj\\",
+      "outputPath": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5828,8 +5828,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.200"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -5901,7 +5900,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.408/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
