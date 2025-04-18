@@ -6,4 +6,4 @@ phases.setup.dotnet = "8.0.408"
 phases.build.cmds = ["dotnet publish Backend/ClothingAPIs/ClothingAPIs.csproj -c Release -o out"]
 
 [start]
-cmd = "dotnet out/ClothingAPIs.dll"
+cmd = "dotnet Backend/ClothingAPIs/out/ClothingAPIs.dll"
