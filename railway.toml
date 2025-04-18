@@ -2,7 +2,7 @@
 builder = "NIXPACKS"
 
 [build.nixpacks]
-phases.setup.dotnet = "8.0.408"
+phases.setup.dotnet = "8.0.100"
 phases.build.cmds = ["dotnet publish Backend/ClothingAPIs/ClothingAPIs.csproj -c Release -o out"]
 
 [start]
