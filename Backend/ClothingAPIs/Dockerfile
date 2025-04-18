@@ -1,5 +1,5 @@
 # Step 1: Use the .NET 8 SDK to build the app
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:9.0.203 AS build
 WORKDIR /src
 
 # Copy everything and restore dependencies
