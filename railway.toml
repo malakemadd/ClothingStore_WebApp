@@ -1,5 +1,5 @@
 [build]
-builder = "NIXPACKS"
+builder = "docker"
 
 [build.nixpacks]
 phases.setup.dotnet = "8.0.408"

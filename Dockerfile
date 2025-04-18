@@ -4,8 +4,13 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-COPY . .
-RUN dotnet publish "ClothingAPIs.csproj" -c Release -o /app/publish
+
+COPY ./Backend/ClothingAPIs/ClothingAPIs.csproj ./ClothingAPIs/
+RUN dotnet restore ./ClothingAPIs/ClothingAPIs.csproj
+
+COPY ./Backend/ClothingAPIs/ ./ClothingAPIs/
+WORKDIR /src/ClothingAPIs
+RUN dotnet publish -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
