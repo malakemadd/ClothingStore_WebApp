@@ -535,4 +535,3 @@ D:\ITI_Content\Angular\last\Backend\ClothingAPIs\bin\Debug\net8.0\out\out\out\pu
 D:\ITI_Content\Angular\last\Backend\ClothingAPIs\bin\Debug\net8.0\out\out\out\publish\global.json
 D:\ITI_Content\Angular\last\Backend\ClothingAPIs\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 D:\ITI_Content\Angular\last\Backend\ClothingAPIs\obj\Debug\net8.0\staticwebassets\msbuild.ClothingAPIs.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-D:\ITI_Content\Angular\last\Backend\ClothingAPIs\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
