@@ -26,4 +26,4 @@ RUN dotnet publish "./ClothingAPIs.csproj" -c $BUILD_CONFIGURATION -o /app/publi
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "ClothingAPIs.dll"]
+ENTRYPOINT ["dotnet", "/app/publish/ClothingAPIs.dll"]
