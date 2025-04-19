@@ -3,5 +3,6 @@ builder = "dockerfile"
 dockerfilePath = "./ClothingAPIs/Dockerfile"
 
 [deploy]
+startCommand = "dotnet ClothingAPIs.dll"
 restartPolicyType = "always"
 healthcheckPath = "/health"
