@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C3B3A1B4-D83D-43A0-A0B4-D1B7235EB09A}|ClothingAPIs.csproj|d:\\iti_content\\angular\\last\\backend\\clothingapis\\global.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C3B3A1B4-D83D-43A0-A0B4-D1B7235EB09A}|ClothingAPIs.csproj|solutionrelative:global.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3B3A1B4-D83D-43A0-A0B4-D1B7235EB09A}|ClothingAPIs.csproj|d:\\iti_content\\angular\\last\\backend\\clothingapis\\clothingapis.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{C3B3A1B4-D83D-43A0-A0B4-D1B7235EB09A}|ClothingAPIs.csproj|solutionrelative:clothingapis.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C3B3A1B4-D83D-43A0-A0B4-D1B7235EB09A}|ClothingAPIs.csproj|d:\\iti_content\\angular\\last\\backend\\clothingapis\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{C3B3A1B4-D83D-43A0-A0B4-D1B7235EB09A}|ClothingAPIs.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3B3A1B4-D83D-43A0-A0B4-D1B7235EB09A}|ClothingAPIs.csproj|d:\\iti_content\\angular\\last\\backend\\clothingapis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3B3A1B4-D83D-43A0-A0B4-D1B7235EB09A}|ClothingAPIs.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\global.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:global.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3B3A1B4-D83D-43A0-A0B4-D1B7235EB09A}|ClothingAPIs.csproj|d:\\iti_content\\angular\\last\\backend\\clothingapis\\clothingapis.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C3B3A1B4-D83D-43A0-A0B4-D1B7235EB09A}|ClothingAPIs.csproj|solutionrelative:clothingapis.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3B3A1B4-D83D-43A0-A0B4-D1B7235EB09A}|ClothingAPIs.csproj|d:\\iti_content\\angular\\last\\backend\\clothingapis\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -212,7 +212,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -236,28 +236,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "global.json",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\global.json",
               "RelativeDocumentMoniker": "global.json",
               "ToolTip": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\global.json",
               "RelativeToolTip": "global.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-18T19:45:41.194Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T19:45:41.194Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Dockerfile",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Dockerfile",
               "RelativeDocumentMoniker": "Dockerfile",
               "ToolTip": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Dockerfile",
               "RelativeToolTip": "Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-04-18T16:59:20.535Z"
+              "WhenOpened": "2025-04-18T16:59:20.535Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -297,19 +296,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAQwDAAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAkwBQAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-24T00:15:11.297Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ClothingAPIs.csproj",
               "DocumentMoniker": "D:\\ITI_Content\\Angular\\last\\Backend\\ClothingAPIs\\ClothingAPIs.csproj",
               "RelativeDocumentMoniker": "ClothingAPIs.csproj",
@@ -317,8 +316,7 @@
               "RelativeToolTip": "ClothingAPIs.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-29T13:16:51.442Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-29T13:16:51.442Z"
             },
             {
               "$type": "Document",

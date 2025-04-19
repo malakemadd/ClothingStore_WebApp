@@ -1,9 +1,8 @@
 [build]
-builder = "docker"
+builder = "dockerfile"
+dockerfilePath = "./ClothingAPIs/Dockerfile"
 
-[build.nixpacks]
-phases.setup.dotnet = "8.0.408"
-phases.build.cmds = ["dotnet publish Backend/ClothingAPIs/ClothingAPIs.csproj -c Release -o out"]
-
-[start]
-cmd = "dotnet Backend/ClothingAPIs/out/ClothingAPIs.dll"
+[deploy]
+startCommand = "dotnet/ClothingAPIs.dll"
+restartPolicyType = "always"
+healthcheckPath = "/health"
