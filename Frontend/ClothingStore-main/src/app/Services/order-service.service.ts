@@ -70,7 +70,7 @@ getOrders(): Observable<expandableOrders> {
 
 
 getAllOrders(): Observable<expandableOrders> {
-  return this.myclient.get<Orders>("http://localhost:5248/api/Order/All", { withCredentials: true }).pipe(
+  return this.myclient.get<Orders>(("http://lastclothinghabashi.runasp.net/api/Order/All", { withCredentials: true }).pipe(
     map(orders => orders.map(cart => ({
       ...cart,            
       IsExpanded: false   
