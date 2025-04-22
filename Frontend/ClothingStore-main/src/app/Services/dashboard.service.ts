@@ -2,6 +2,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { category, product } from '../Models/product';
+import { Orders } from '../Models/cart';
+import { User } from '../Models/user/user';
 
 @Injectable({
   providedIn: 'root'
@@ -30,3 +33,4 @@ export class DashboardService {
 
    
 }
+

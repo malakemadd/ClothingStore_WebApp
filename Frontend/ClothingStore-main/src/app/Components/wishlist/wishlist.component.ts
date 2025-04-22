@@ -30,7 +30,7 @@ export class WishlistComponent implements OnInit {
 
   wishlistItems: any[] = [];
 
-  
+  //route => access the route parameters
   constructor(private wishlistService: WishlistService, private route:ActivatedRoute, private productService:ProductsService,private cartservice:CartService,private alertService:AlertService) {}
 
 
@@ -38,6 +38,7 @@ export class WishlistComponent implements OnInit {
 loadwishlist(){
   this.wishlistItems = [];
   this.wishlistItemsIds = [];
+// Subscribe to the route parameters to get the userId
   this.route.params.subscribe(params => {
     const userId = params['userId'];
     console.log('UserId:', userId);
@@ -73,7 +74,7 @@ ngOnInit(): void {
 
 
 AddToCart(code:number){
-{
+
     const cartItem: AddToCart={ProductId:code, quantity:1};
     this.cartservice.AddToCart(cartItem).subscribe({
       next: (data) => {
@@ -94,7 +95,7 @@ AddToCart(code:number){
       }
   }
     })
-  }
+  
 }
 
 
@@ -102,9 +103,6 @@ AddToCart(code:number){
   console.log('Removing wishlist item with id:', id);
   this.wishlistService.removeFromWishlist(id).subscribe({
     next: () => {
-
-      // this.wishlistItems = this.wishlistItems.filter(item => item.id !== id);
-      // this.wishlistItemsIds=this.wishlistItemsIds.filter(item=>item!==id);
 
       this.loadwishlist();
 
