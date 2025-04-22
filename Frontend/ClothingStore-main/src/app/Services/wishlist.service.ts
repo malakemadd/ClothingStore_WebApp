@@ -7,43 +7,13 @@ import { HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class WishlistService {
-  private apiUrl = 'http://localhost:5248/api/WishList'; 
+ private apiUrl = 'http://lastclothinghabashi.runasp.net/api/WishList'; 
   prdId: Number = 0; //  match .NET DTO
-  // prdName: string = '';
-  // prdImg: string = '';
-  // prdDes: string = '';
   userId: string = '';
 
   constructor(private http: HttpClient) {}
-  
-  // prdName: string, prdImg: string, prdDes: string
+ 
   addToWishlist(productId: number ): Observable<any> {
-  //   const userId = sessionStorage.getItem('userId');
-  //   const token = localStorage.getItem('token');
-  
-  //   if (!userId) {
-  //     console.error('User ID not found! Cannot add to wishlist.');
-  //     return throwError(() => new Error('User ID not found!'));;
-  //   }
-  
-  //   const wishlistData = {
-  //     prdId: productId, // Ensure it matches the backend DTO
-  //     // prdName: prdName,
-  //     // prdImg: prdImg,
-  //     // prdDes: prdDes,
-  //     userId: userId
-  //   };
-  //   // Set Authorization header
-  // const headers = new HttpHeaders({
-  //   'Authorization': `Bearer ${token}`, // Ensure token exists
-  //   'Content-Type': 'application/json'
-  // });
-  
-  //   console.log('Adding to wishlist:', wishlistData);
-  // let prodid=productId;
-  // let wish: Wishlist|null =null;
-  // wish.ProdId=productId;
-  // console.log(prodid,"asdpioasdiopas");
     return this.http.post(`${this.apiUrl}/create`,{"prodid":productId}
       , { headers: { 'Content-Type': 'application/json' }, withCredentials:true }).pipe(
       tap(response => console.log('Item added to wishlist:', response)),
@@ -57,13 +27,6 @@ export class WishlistService {
   
   
   getWishlist(): Observable<any[]> {
-    // const userId = sessionStorage.getItem('userId'); 
-    // console.log('User ID:', userId);
-  
-    // if (!userId) {
-    //   console.error('No user ID found!');
-    //   return new Observable<any[]>(); 
-    // }
   
     return this.http.get<any>(`${this.apiUrl}/GetFavoriteByUserId`, {withCredentials:true}).pipe(
       tap(response => console.log('API Response:', response)), 

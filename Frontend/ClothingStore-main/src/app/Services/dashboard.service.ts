@@ -7,8 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DashboardService {
-  private baseUrl = 'http://localhost:5248/api'; 
-
+  private baseUrl = 'http://lastclothinghabashi.runasp.net/api'; 
   constructor(private http: HttpClient) {}
 
   getAllUsers(): Observable<any[]> {

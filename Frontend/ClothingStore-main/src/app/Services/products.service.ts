@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class ProductsService {
   constructor(private myClinet: HttpClient) { }
 
-  URL="http://localhost:5248/api/Product";
+  URL="http://lastclothinghabashi.runasp.net/api/Product";
 
   getAllProducts(): Observable<product[]> {
     return this.myClinet.get<product[]>(this.URL, {withCredentials:true})

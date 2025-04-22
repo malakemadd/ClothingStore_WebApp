@@ -12,15 +12,12 @@ export class UserAuthService {
   private authStatus = new BehaviorSubject<isAuthenticated>({ isAuthenticated: false, userName: '' });
   authStatus$ = this.authStatus.asObservable();
 
-  private apiUrl = 'http://localhost:5248/api/Account';
+  private apiUrl = 'http://lastclothinghabashi.runasp.net/api/Account';
 
   constructor(private http: HttpClient, private router: Router) {}
 
   register(reg: registerDTO): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/register`, reg, {
-      withCredentials: true,
-      observe: 'response'
-    });
+    return this.http.post<any>('`${this.apiUrl}/register`',reg,{withCredentials:true,observe:'response'})
   }
 
   login(log: logDTO): Observable<any> {
@@ -54,7 +51,7 @@ export class UserAuthService {
   }
 
   externallogin(provider: string, returnUrl: string) {
-    const url = `${this.apiUrl}/External-login?provider=${encodeURIComponent(provider)}&returnUrl=${encodeURIComponent(returnUrl)}`;
+    this.url=`http://lastclothinghabashi.runasp.net/api/Account/External-login?
     window.location.href = url;
   }
 }

@@ -9,10 +9,10 @@ import { catchError, concatMap, EMPTY, map, Observable, switchMap, tap } from 'r
 export class OrderServiceService {
 
   constructor(private myclient: HttpClient) {}
-  getOrdersURL="http://localhost:5248/api/Order"
-  getCartURL="http://localhost:5248/api/Order/GetCart"
-   emptyCartURL="http://localhost:5248/api/Order/EmptyCart"
-   confirmorderurl="http://localhost:5248/api/Order"
+ getOrdersURL="http://lastclothinghabashi.runasp.net/api/Order"
+   getCartURL="http://lastclothinghabashi.runasp.net/api/Order/GetCart"
+    emptyCartURL="http://lastclothinghabashi.runasp.net/api/Order/EmptyCart"
+    confirmorderurl="http://lastclothinghabashi.runasp.net/api/Order"
   getCart():Observable<Cart> 
   {
    
@@ -70,7 +70,7 @@ getOrders(): Observable<expandableOrders> {
 
 
 getAllOrders(): Observable<expandableOrders> {
-  return this.myclient.get<Orders>("http://localhost:5248/api/Order/All", { withCredentials: true }).pipe(
+  return this.myclient.get<Orders>(("http://lastclothinghabashi.runasp.net/api/Order/All", { withCredentials: true }).pipe(
     map(orders => orders.map(cart => ({
       ...cart,            
       IsExpanded: false   
