@@ -39,7 +39,7 @@
 
         <div class="row justify-content-center">
             <!-- Filters Sidebar -->
-            <div class="col-3 d-flex flex-column filter-sidebar">
+            <div class="d-flex flex-column filter-sidebar">
                 <div class="filter-section">
                     <div class="filter-header" (click)="toggleSection('category')">
                         <span>Category</span>
@@ -192,11 +192,11 @@
             </div>
             
             <!-- Products Grid -->
-            <div class="col-9">
-                <div class="row products-grid">
-                    @for(prod of paginatedProducts; track $index){   
-                        <div class="col-4 mb-4">
-                            <app-one-product [prodData]="prod"></app-one-product>  
+            <div class="col-6 col-lg-8 col-xl-9">
+                 <div class="row products-grid ">
+                     @for(prod of paginatedProducts; track $index){
+                         <div class="col-12 col-lg-6 col-xl-4 mb-4 ">
+                             <app-one-product [prodData]="prod"></app-one-product>
                         </div>
                     }
                 </div>
